@@ -38,6 +38,8 @@ class RootController extends ControllerBase
         if(move_uploaded_file($_FILES['file']['tmp_name'],$targetFile)){
             //insert file information into db table
             //$conn->query("INSERT INTO files (file_name, uploaded) VALUES('".$fileName."','".date("Y-m-d H:i:s")."')");
+            echo json_encode(array('success' => 1));
+
         }
         
     }
